@@ -40,12 +40,12 @@ Then run `/reload-plugins`, or start a new session.
 
 ### In Claude Science
 
-Claude Science adds skills rather than plugins. Open **Customize**, choose to add skills from a
-repository, and enter `s27183/fiducial-lab`. If it asks which folder, point it at
-`skills/` — both skills live there, each with its `SKILL.md` and, for the solver, its
-`scripts/` folder.
+1. Open **Customize**, then **Skills**, then **Import from GitHub**.
+2. Enter `s27183/fiducial-lab` and click **Preview**. Both skills are listed.
+3. Click **Import 2 skills**.
 
-Claude Science runs Python on your own machine, so both skills, solvers included, work there.
+Imported skills don't update automatically; import again to pick up a new release. Claude
+Science runs Python on your own machine, so both skills, solvers included, work there.
 
 ### Without Claude
 

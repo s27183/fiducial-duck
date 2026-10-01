@@ -74,15 +74,27 @@ a check against a known answer before the actual geometry.
 
 ## Where it runs
 
-| Skill | Claude app chat | Cowork | Claude Code / Claude Science | Without Claude |
-|---|---|---|---|---|
-| `verified-reproduction` — the method | yes | yes | yes | read `SKILL.md` |
-| `channel-flow-fem` — the solvers | needs Python with pip | needs Python with pip | yes | yes |
+| Skill | Cowork | Claude Science | Claude Code | Claude app chat | Without Claude |
+|---|---|---|---|---|---|
+| `verified-reproduction` — the method | yes | yes | yes | yes | read `SKILL.md` |
+| `channel-flow-fem` — the solvers | yes, tested | yes | yes | needs Python with pip | yes, tested |
 
-The solvers need `pip install` of `scikit-fem` and `gmsh`, so they need an environment where
-Claude can run Python and install packages — your own machine through Claude Code or Claude
-Science is the dependable choice. **Tested so far:** the scripts, run directly. **Not yet tested:** loading the
-plugin through each Claude client. Reports of either working or failing are welcome as issues.
+The solvers need `pip install` of `scikit-fem`, `gmsh` and `meshio`, so they need an environment where
+Claude can run Python and install packages.
+
+**Tested so far:**
+
+- **Cowork**, installed through the plugin marketplace. A request that never named the plugin
+  ("compute the wall shear stress in a 500 µm channel at 6 mL/min and check it against the
+  analytical value") loaded `channel-flow-fem` unprompted, installed the dependencies, and
+  matched the exact 0.336 Pa to within 10⁻¹³. Its sandbox also needed the X11/OpenGL system
+  libraries for `gmsh`, and `meshio`, which v0.1.0 failed to list.
+- **Claude Science**, imported from GitHub. Both skills were found and imported intact, and the
+  benchmarks pass from the imported copy.
+- **The scripts**, run directly from a fresh download of the release.
+
+**Not yet tested:** installing through Claude Code and using the solvers from Claude app chat.
+Reports of either working or failing are welcome as issues.
 
 ## What is inside
 

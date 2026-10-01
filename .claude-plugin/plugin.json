@@ -1,6 +1,6 @@
 {
   "name": "fiducial-lab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verified computational methods for biomedical-engineering research: reproduce published simulations with open-source tools, check every step against closed-form benchmarks, and write up results that refuse to build when a claim stops holding.",
   "author": {
     "name": "Son Tran"

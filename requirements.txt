@@ -4,3 +4,4 @@ scipy        # tested 1.18.0
 matplotlib   # tested 3.11.1
 scikit-fem   # tested 12.0.2
 gmsh         # tested 4.15.2
+meshio       # tested 5.3.5; scikit-fem needs it to read .msh files but does not install it

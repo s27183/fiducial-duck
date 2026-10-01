@@ -14,15 +14,22 @@ four-point flow-rate sweep runs in about four minutes on 16 cores.
 ## Rule zero: run the benchmarks before believing anything
 
 ```bash
-pip install numpy scipy matplotlib scikit-fem gmsh
+pip install numpy scipy matplotlib scikit-fem gmsh meshio
 python3 scripts/benchmarks.py all
 ```
+
+`meshio` is required: scikit-fem uses it to read gmsh files but lists it only as an optional
+extra, so `pip install scikit-fem` alone leaves `MeshTri.load` failing with an import error.
+
+On minimal Linux images (containers, cloud sandboxes) `import gmsh` can fail because the pip
+wheel expects X11 and OpenGL runtime libraries to be present. Install them with the system
+package manager and retry; no display is needed.
 
 Expected on a correct installation:
 
 | Benchmark | Expected | Graded |
 |---|---|---|
-| Steady parallel-plate wall shear, 500 µm channel, 6 mL/min | 0.336000 Pa; relative error ~1e-15 | yes, < 1e-8 |
+| Steady parallel-plate wall shear, 500 µm channel, 6 mL/min | 0.336000 Pa; relative error 1e-13 or smaller (rounding noise varies by install) | yes, < 1e-8 |
 | Womersley flow, 1 Hz (Wo ≈ 0.75), 25/50/100 steps per cycle | errors ≈ 9.1e-5, 1.8e-5, 4.1e-6; ratio ≈ 4–5 per halving | yes |
 | Womersley flow, 100 Hz (Wo ≈ 7.5) | errors stall near 3e-3 | no — spatial floor, see below |
 

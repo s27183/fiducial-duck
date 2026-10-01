@@ -1,0 +1,14 @@
+{
+  "name": "fiducial-lab",
+  "description": "The fiducial-lab plugin, served from its own repository.",
+  "owner": {
+    "name": "Son Tran"
+  },
+  "plugins": [
+    {
+      "name": "fiducial-lab",
+      "source": "./",
+      "description": "Verified computational methods for biomedical-engineering research: reproduce published simulations with open-source tools, check every step against closed-form benchmarks, and write up results that refuse to build when a claim stops holding."
+    }
+  ]
+}

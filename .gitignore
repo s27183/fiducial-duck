@@ -1,0 +1,14 @@
+# local work not yet published
+examples/ridged-channel-2019/
+
+__pycache__/
+*.pyc
+*.msh
+fields.npz
+.DS_Store
+examples/*/study_results*.json
+examples/*/software_versions.json
+examples/*/steady_benchmark.json
+examples/*/womersley_verification.json
+examples/*/vortex_replication.png
+examples/*/replication_paper.*

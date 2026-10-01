@@ -1,0 +1,6 @@
+# Tested with the versions noted; older releases are untested, not known to fail.
+numpy        # tested 2.5.2
+scipy        # tested 1.18.0
+matplotlib   # tested 3.11.1
+scikit-fem   # tested 12.0.2
+gmsh         # tested 4.15.2

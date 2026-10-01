@@ -1,0 +1,21 @@
+{
+  "name": "fiducial-lab",
+  "version": "0.1.0",
+  "description": "Verified computational methods for biomedical-engineering research: reproduce published simulations with open-source tools, check every step against closed-form benchmarks, and write up results that refuse to build when a claim stops holding.",
+  "author": {
+    "name": "Son Tran"
+  },
+  "license": "MIT",
+  "keywords": [
+    "biomedical-engineering",
+    "microfluidics",
+    "cfd",
+    "finite-element",
+    "reproducibility",
+    "verification",
+    "scikit-fem",
+    "wall-shear-stress"
+  ],
+  "repository": "https://github.com/s27183/fiducial-lab",
+  "homepage": "https://github.com/s27183/fiducial-lab"
+}

@@ -11,19 +11,35 @@ tangential wall traction. Everything is plain Python; the largest case tested so
 (about 200,000 unknowns) peaks near 2.2 GB of memory and a three-level mesh study with a
 four-point flow-rate sweep runs in about four minutes on 16 cores.
 
+## Requirements
+
+Install these before the first run, using whatever the environment provides (pip, conda, the
+system package manager). Each is needed; none is optional.
+
+**Python packages:** `numpy`, `scipy`, `matplotlib`, `scikit-fem`, `gmsh`, `meshio`.
+`meshio` must be listed explicitly: scikit-fem uses it to read gmsh files but treats it as an
+optional extra, so installing scikit-fem alone leaves `MeshTri.load` failing.
+
+**System libraries, Linux only.** The `gmsh` Linux wheel links against X11 and OpenGL shared
+libraries that minimal images (containers, cloud sandboxes) often lack:
+
+`libGL.so.1`, `libGLU.so.1`, `libX11.so.6`, `libXext.so.6`, `libXrender.so.1`, `libXcursor.so.1`, `libXfixes.so.3`, `libXft.so.2`, `libXinerama.so.1`, `libfontconfig.so.1`, `libgomp.so.1`, `libz.so.1`
+
+No display is needed; they only have to be present. If one is missing, `import gmsh` fails
+with `OSError: <library>: cannot open shared object file`, and `make_mesh.py` repeats this
+list. On Debian or Ubuntu, for example:
+
+```bash
+apt-get update && apt-get install -y libglu1-mesa libgl1 libxrender1 libxcursor1 libxfixes3 libxext6 libxft2 libfontconfig1 libxinerama1 libx11-6 libgomp1 zlib1g
+```
+
+The macOS wheel needs no system libraries (tested). Windows is untested.
+
 ## Rule zero: run the benchmarks before believing anything
 
 ```bash
-pip install numpy scipy matplotlib scikit-fem gmsh meshio
 python3 scripts/benchmarks.py all
 ```
-
-`meshio` is required: scikit-fem uses it to read gmsh files but lists it only as an optional
-extra, so `pip install scikit-fem` alone leaves `MeshTri.load` failing with an import error.
-
-On minimal Linux images (containers, cloud sandboxes) `import gmsh` can fail because the pip
-wheel expects X11 and OpenGL runtime libraries to be present. Install them with the system
-package manager and retry; no display is needed.
 
 Expected on a correct installation:
 

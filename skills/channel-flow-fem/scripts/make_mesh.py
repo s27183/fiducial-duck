@@ -19,7 +19,16 @@ Modelling choices the caller should state when reporting results
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import gmsh, numpy as np, sys
+import numpy as np, sys
+try:
+    import gmsh
+except OSError as _e:                      # the Linux pip wheel loads X11/OpenGL libraries at import
+    raise SystemExit(
+        f"gmsh could not load a system library ({_e}).\n"
+        "On Linux the gmsh wheel needs these shared libraries (no display is needed):\n"
+        "  libGL.so.1 libGLU.so.1 libX11.so.6 libXext.so.6 libXrender.so.1 libXcursor.so.1 libXfixes.so.3 libXft.so.2 libXinerama.so.1 libfontconfig.so.1 libgomp.so.1 libz.so.1\n"
+        "Install them with the system package manager and retry. On Debian/Ubuntu, for example:\n"
+        "  apt-get update && apt-get install -y libglu1-mesa libgl1 libxrender1 libxcursor1 libxfixes3 libxext6 libxft2 libfontconfig1 libxinerama1 libx11-6 libgomp1 zlib1g") from None
 
 H       = 500e-6      # channel height (cavity region)
 HR      = 100e-6      # ridge height

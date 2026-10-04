@@ -1,21 +1,23 @@
 {
-  "name": "fiducial-lab",
-  "version": "0.1.2",
-  "description": "Verified computational methods for biomedical-engineering research: reproduce published simulations with open-source tools, check every step against closed-form benchmarks, and write up results that refuse to build when a claim stops holding.",
+  "name": "fiducial-duck",
+  "version": "0.2.0",
+  "description": "AI that does the computational heavy lifting in research, and checks its own work. Starts with verified microfluidic channel flow (scikit-fem, gmsh) and a general procedure for reproducing published simulations.",
   "author": {
     "name": "Son Tran"
   },
   "license": "MIT",
   "keywords": [
+    "ai-for-science",
     "biomedical-engineering",
-    "microfluidics",
     "cfd",
     "finite-element",
+    "microfluidics",
     "reproducibility",
-    "verification",
+    "rubber-duck-debugging",
     "scikit-fem",
+    "verification",
     "wall-shear-stress"
   ],
-  "repository": "https://github.com/s27183/fiducial-lab",
-  "homepage": "https://github.com/s27183/fiducial-lab"
+  "repository": "https://github.com/s27183/fiducial-duck",
+  "homepage": "https://github.com/s27183/fiducial-duck"
 }

@@ -1,11 +1,11 @@
-# fiducial-lab
+# fiducial-duck
 
-Verified computational methods for biomedical-engineering research — for use with Claude, or
-as plain Python without it.
+AI that does the computational heavy lifting in research, and checks its own work. Claude skills, plus plain Python that runs without Claude.
 
-A *fiducial* is the reference mark everything else is aligned to. The idea here is the same:
-check every computation against something with a known answer before believing it, and write
-results up so the document refuses to build when a claim stops holding.
+A *fiducial* is the reference mark everything else is aligned to. The duck is the programmer's
+rubber duck: the one you explain your code to until you spot your own mistake. Together they
+are the idea here. Every computation is anchored to something with a known answer, and checked
+against it, before anyone builds on it.
 
 The first release covers steady and oscillating flow in microfluidic channels — the kind of
 problem often run in ANSYS Fluent or COMSOL — with free software, plus the general procedure
@@ -23,8 +23,8 @@ for reproducing a published simulation so that every step can be checked.
 ### In the Claude app or Cowork (web or desktop)
 
 1. Open **Customize** in the left sidebar, then the **Plugins** tab.
-2. Click **Add**, choose **Add marketplace**, and enter `s27183/fiducial-lab`.
-3. Find **fiducial-lab** in the list and click **Add**.
+2. Click **Add**, choose **Add marketplace**, and enter `s27183/fiducial-duck`.
+3. Find **fiducial-duck** in the list and click **Add**.
 
 The plugin is saved to your account, so it also appears in Claude Code when you sign in with
 the same account.
@@ -32,8 +32,8 @@ the same account.
 ### In Claude Code (terminal)
 
 ```
-/plugin marketplace add s27183/fiducial-lab
-/plugin install fiducial-lab@fiducial-lab
+/plugin marketplace add s27183/fiducial-duck
+/plugin install fiducial-duck@fiducial-duck
 ```
 
 Then run `/reload-plugins`, or start a new session.
@@ -41,7 +41,7 @@ Then run `/reload-plugins`, or start a new session.
 ### In Claude Science
 
 1. Open **Customize**, then **Skills**, then **Import from GitHub**.
-2. Enter `s27183/fiducial-lab` and click **Preview**. Both skills are listed.
+2. Enter `s27183/fiducial-duck` and click **Preview**. Both skills are listed.
 3. Click **Import 2 skills**.
 
 Imported skills don't update automatically; import again to pick up a new release. Claude
@@ -60,9 +60,9 @@ Tested with Python 3.12; older versions are untested. [Typst](https://github.com
 
 Once installed, try these in a new conversation:
 
-> Run the fiducial-lab benchmarks and tell me whether they pass.
+> Run the fiducial-duck benchmarks and tell me whether they pass.
 
-> Using fiducial-lab, compute the wall shear stress in a 500 µm channel with six 100 µm
+> Using fiducial-duck, compute the wall shear stress in a 500 µm channel with six 100 µm
 > ridges at 5 mL/min, and show me the mesh-convergence check.
 
 > I want to reproduce the simulation in [paper or DOI]. Walk me through recovering its

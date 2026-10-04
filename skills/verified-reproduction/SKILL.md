@@ -1,6 +1,6 @@
 ---
 name: verified-reproduction
-description: "Procedure for reproducing a published simulation or computational result so that each step can be checked: recovering parameters from the publisher's structured source, verifying against a closed-form case, mesh or resolution convergence, comparing with the published result without tuning toward it, and writing it up so the document fails to build when a claim stops holding. Use when replicating a paper's CFD, FEA or numerical model, porting a model from ANSYS or COMSOL to open-source tools, or auditing whether a computed result supports a written claim. Part of the fiducial-lab plugin."
+description: "Procedure for reproducing a published simulation or computational result so that each step can be checked: recovering parameters from the publisher's structured source, verifying against a closed-form case, mesh or resolution convergence, comparing with the published result without tuning toward it, and writing it up so the document fails to build when a claim stops holding. Use when replicating a paper's CFD, FEA or numerical model, porting a model from ANSYS or COMSOL to open-source tools, or auditing whether a computed result supports a written claim. Part of the fiducial-duck plugin."
 ---
 
 # Verified reproduction

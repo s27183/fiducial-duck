@@ -1,6 +1,6 @@
 ---
 name: channel-flow-fem
-description: "Steady and oscillatory incompressible flow in 2-D microfluidic channels with open-source finite elements (scikit-fem + gmsh), with closed-form benchmarks built in. Use for wall shear stress, cavity vortices, ridged or stepped channel geometry, pulsatile or oscillating flow, Womersley number, TAWSS and OSI, or replacing an ANSYS Fluent / COMSOL laminar-flow model with free software. Part of the fiducial-lab plugin; run its benchmarks with scripts/benchmarks.py."
+description: "Steady and oscillatory incompressible flow in 2-D microfluidic channels with open-source finite elements (scikit-fem + gmsh), with closed-form benchmarks built in. Use for wall shear stress, cavity vortices, ridged or stepped channel geometry, pulsatile or oscillating flow, Womersley number, TAWSS and OSI, or replacing an ANSYS Fluent / COMSOL laminar-flow model with free software. Part of the fiducial-duck plugin; run its benchmarks with scripts/benchmarks.py."
 ---
 
 # Channel flow with finite elements, benchmarked first

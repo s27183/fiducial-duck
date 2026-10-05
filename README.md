@@ -120,4 +120,6 @@ what that means in practice.
 
 ## Licence
 
-MIT — see `LICENSE`. Copyright © 2026 Son Tran.
+MIT, which in plain terms means you can use, change and share this freely, in research,
+teaching, papers or anything else, with no permission needed. The only condition is keeping
+the copyright notice in copies of the code. Full text in `LICENSE`. Copyright © 2026 Son Tran.
